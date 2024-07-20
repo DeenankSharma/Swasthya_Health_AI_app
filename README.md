@@ -4,6 +4,7 @@
 It holds the power to revolutionize this domain by providing personalized wellness recommendations based upon user’s data and preferences.</p>
 <h2>Features</h2>
 <ul>
+  <li>Using Google OAUTH for user login</li>
   <li>To use Llama 3 for answering health related doubts</li>
   <li>Dynamic article and video recommendations  based on user’s searches with the chatbot</li>
   <li>To allow users to discover prompt related medical centers near them  </li>
