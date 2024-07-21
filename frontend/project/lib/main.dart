@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:project/gitit/gitit.dart';
 import 'package:project/presentation/chat/bloc/chat_bloc.dart';
 import 'package:project/presentation/chat/chat.dart';
+import 'package:project/presentation/health/health.dart';
 import 'package:project/presentation/home/bloc/home_bloc.dart';
 import 'package:project/presentation/home/home.dart';
 import 'package:project/presentation/auth/intro.dart';
@@ -32,7 +33,7 @@ class MainApp extends StatelessWidget {
       ],child: MaterialApp(
         debugShowCheckedModeBanner: false,
         theme: ThemeData(primaryColor: Color.fromRGBO(240, 56, 88, 1),textTheme: GoogleFonts.montserratTextTheme(),),
-        home:Intro(),
+        home:LoginPage(show: (){},),
       ),
     );
   }
