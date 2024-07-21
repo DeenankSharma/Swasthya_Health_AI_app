@@ -1,14 +1,20 @@
 import 'package:flutter/material.dart';
+import 'package:project/gitit/gitit.dart';
 import 'package:project/presentation/chat/bloc/chat_bloc.dart';
+import 'package:project/presentation/chat/chat.dart';
 import 'package:project/presentation/home/bloc/home_bloc.dart';
 import 'package:project/presentation/home/home.dart';
-import 'package:project/presentation/login_page/login.dart';
+import 'package:project/presentation/auth/intro.dart';
+import 'package:project/presentation/auth/login.dart';
+import 'package:project/presentation/auth/register.dart';
 import 'package:project/presentation/profile/bloc/profile_bloc.dart';
 import 'package:provider/provider.dart';
 import 'package:project/providers/screenIndexProvider.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-void main(){
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await getInitit();
   runApp(MainApp());
 }
 
@@ -26,8 +32,7 @@ class MainApp extends StatelessWidget {
       ],child: MaterialApp(
         debugShowCheckedModeBanner: false,
         theme: ThemeData(primaryColor: Color.fromRGBO(240, 56, 88, 1),textTheme: GoogleFonts.montserratTextTheme(),),
-        home:LoginPage(),
-
+        home:Intro(),
       ),
     );
   }
